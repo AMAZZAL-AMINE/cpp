@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 18:15:16 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/19 15:34:34 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:45:12 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ using namespace std;
 
 int main(int argc, char *arg[]) {
   if (argc > 1) {
+    std::string newString;
     int count = 1;
     int index = 0;
     while (arg[count]) {
       index = 0;
-      while (arg[count][index]) {
-          putchar(toupper(arg[count][index]));
-
-
+      newString = arg[count];
+      while (newString[index]) {
+        putchar(toupper(newString[index]));
         index++;
       }
       count++;
