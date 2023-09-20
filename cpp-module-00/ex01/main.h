@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   main.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/08 18:51:06 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/20 16:44:22 by mamazzal         ###   ########.fr       */
+/*   Created: 2023/09/20 10:15:45 by mamazzal          #+#    #+#             */
+/*   Updated: 2023/09/20 10:31:25 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef MAIN_H
+#define MAIN_H
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
-#include "main.h"
-
-class Contact {
-  private : 
-    std::string name;
-    std::string phone;
-  public :
-    Contact (std::string name="", std::string phone="") {
-      this->name = name;
-      this->phone = phone;
-    }
-    std::string getName() {
-      return this->name;
-    }
-    std::string getPhone() {
-      return this->phone;
-    }
-};
+#include <iostream>
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 #endif
