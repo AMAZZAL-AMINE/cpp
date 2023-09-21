@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 19:13:01 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/21 12:17:45 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/21 15:22:28 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ class PhoneBook {
       std::cout << "|" << std::setw(15) << "FIRST NAME" << std::setw(5);
       std::cout << "|" << std::setw(15) << "LAST NAME" << std::setw(5);
       std::cout << "|" << std::setw(15) << "NICK NAME" << std::setw(5);
-      std::cout << "|" << std::setw(15) << "DARK SECRET" << std::setw(5);
-      std::cout << "|" << std::setw(10) << "PHONE" << std::setw(5) << "|" << std::endl;
+      std::cout << "|" << std::setw(15) << "DARK SECRET" << std::setw(5)<< std::endl;
+      // std::cout << "|" << std::setw(10) << "PHONE" << std::setw(5) << "|" << std::endl;
       std::cout << "******************************************************************************************************" << std::endl;
     }
     void AddContact(Contact contact) {
@@ -50,11 +50,11 @@ class PhoneBook {
       this->printTbaleHeader();
       while (count < this->index || (is_full != 0 && count < 8)) {
         std::cout << "|" << std::setw(3)  << count << std::setw(3);
-        std::cout << "|" << std::setw(15) << this->contacts[count].getFirstName() << std::setw(5);
-        std::cout << "|" << std::setw(15) << this->contacts[count].getLastName() << std::setw(5);
-        std::cout << "|" << std::setw(15) << this->contacts[count].getNickName() << std::setw(5);
-        std::cout << "|" << std::setw(15) << this->contacts[count].getdarkSecret() << std::setw(5);
-        std::cout << "|" << std::setw(10) << this->contacts[count].getPhone() << std::setw(5) << "|" << std::endl;
+        std::cout << "|" << std::setw(15) << this->contacts[count].getFirstName();
+        std::cout << "|" << std::setw(15) << this->contacts[count].getLastName();
+        std::cout << "|" << std::setw(15) << this->contacts[count].getNickName();
+        std::cout << "|" << std::setw(15) << this->contacts[count].getdarkSecret()<< std::endl;
+        // std::cout << "|" << std::setw(10) << this->contacts[count].getPhone() << std::setw(5) << "|" << std::endl;
         count++;
       }
     }
@@ -70,8 +70,8 @@ class PhoneBook {
             std::cout << "|" << std::setw(15) << this->contacts[searchCount].getFirstName() << std::setw(5);
             std::cout << "|" << std::setw(15) << this->contacts[searchCount].getLastName() << std::setw(5);
             std::cout << "|" << std::setw(15) << this->contacts[searchCount].getNickName() << std::setw(5);
-            std::cout << "|" << std::setw(15) << this->contacts[searchCount].getdarkSecret() << std::setw(5);
-            std::cout << "|" << std::setw(10) << this->contacts[searchCount].getPhone() << std::setw(5) << "|" << std::endl;
+            std::cout << "|" << std::setw(15) << this->contacts[searchCount].getdarkSecret() << std::setw(5)<< std::endl;
+            // std::cout << "|" << std::setw(10) << this->contacts[searchCount].getPhone() << std::setw(5) << "|" << std::endl;
             break;
           }
           searchCount++;
