@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:49:14 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/21 18:09:05 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/21 20:15:06 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ class Zombie {
     std::string name;
   public :
     Zombie(std::string name);
-    void announce(void) {
-      std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-    }
+    void announce(void);
 };
 
 #endif
