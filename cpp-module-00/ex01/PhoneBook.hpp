@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 19:13:01 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/20 21:08:27 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/21 12:17:45 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ class PhoneBook {
       this->index = 0;
       this->is_full = 0;
     }
+    void printTbaleHeader() {
+      std::cout << "******************************************************************************************************" << std::endl;
+      std::cout << "|" << std::setw(3) << "ID" << std::setw(3);
+      std::cout << "|" << std::setw(15) << "FIRST NAME" << std::setw(5);
+      std::cout << "|" << std::setw(15) << "LAST NAME" << std::setw(5);
+      std::cout << "|" << std::setw(15) << "NICK NAME" << std::setw(5);
+      std::cout << "|" << std::setw(15) << "DARK SECRET" << std::setw(5);
+      std::cout << "|" << std::setw(10) << "PHONE" << std::setw(5) << "|" << std::endl;
+      std::cout << "******************************************************************************************************" << std::endl;
+    }
     void AddContact(Contact contact) {
       this->contacts[this->index] = contact;
       this->index++;
@@ -37,12 +47,14 @@ class PhoneBook {
     }
     void DisplayContacts() {
       int count = 0;
-      std::cout << "_____________________________________________" << std::endl;
-      std::cout << "ID | NAME | PHONE " << std::endl;
-      std::cout << "_____________________________________________" << std::endl;
+      this->printTbaleHeader();
       while (count < this->index || (is_full != 0 && count < 8)) {
-        std::cout << " " << count << " | " << this->contacts[count].getName() << " | " << this->contacts[count].getPhone() << std::endl;
-        std::cout << "_____________________________________________" << std::endl;
+        std::cout << "|" << std::setw(3)  << count << std::setw(3);
+        std::cout << "|" << std::setw(15) << this->contacts[count].getFirstName() << std::setw(5);
+        std::cout << "|" << std::setw(15) << this->contacts[count].getLastName() << std::setw(5);
+        std::cout << "|" << std::setw(15) << this->contacts[count].getNickName() << std::setw(5);
+        std::cout << "|" << std::setw(15) << this->contacts[count].getdarkSecret() << std::setw(5);
+        std::cout << "|" << std::setw(10) << this->contacts[count].getPhone() << std::setw(5) << "|" << std::endl;
         count++;
       }
     }
@@ -53,15 +65,23 @@ class PhoneBook {
         }
         while (searchCount < this->index || (is_full != 0 && searchCount < 8)) {
           if (searchCount == searchQuery) {
-            std::cout << "_____________________________________________" << std::endl;
-            std::cout << "ID | NAME | PHONE " << std::endl;
-            std::cout << "_____________________________________________" << std::endl;
-            std::cout << " " << searchCount << " | " << this->contacts[searchCount].getName() << " | " << this->contacts[searchCount].getPhone() << std::endl;
+            this->printTbaleHeader();
+            std::cout << "|" << std::setw(3)  << searchCount << std::setw(3);
+            std::cout << "|" << std::setw(15) << this->contacts[searchCount].getFirstName() << std::setw(5);
+            std::cout << "|" << std::setw(15) << this->contacts[searchCount].getLastName() << std::setw(5);
+            std::cout << "|" << std::setw(15) << this->contacts[searchCount].getNickName() << std::setw(5);
+            std::cout << "|" << std::setw(15) << this->contacts[searchCount].getdarkSecret() << std::setw(5);
+            std::cout << "|" << std::setw(10) << this->contacts[searchCount].getPhone() << std::setw(5) << "|" << std::endl;
             break;
           }
           searchCount++;
         }
     }
+  
+    void Exit(void) {
+      std::cout << "GOOD BY HBIBI" << std::endl;
+      exit(0);
+    }
 };
 
-#endif  
+#endif

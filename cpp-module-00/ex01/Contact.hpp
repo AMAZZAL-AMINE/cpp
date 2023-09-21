@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 18:51:06 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/20 16:44:22 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/21 10:31:38 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,30 @@
 
 class Contact {
   private : 
-    std::string name;
+    std::string firstName;
+    std::string lastName;
+    std::string nickName;
+    std::string darkSecret;
     std::string phone;
   public :
-    Contact (std::string name="", std::string phone="") {
-      this->name = name;
+    Contact (std::string firstName="", std::string lastName="", std::string nickName="", std::string darkSecret="", std::string phone="") {
+      this->firstName = firstName;
+      this->lastName = lastName;
+      this->nickName = nickName;
+      this->darkSecret = darkSecret;
       this->phone = phone;
     }
-    std::string getName() {
-      return this->name;
+    std::string getFirstName() {
+      return this->firstName;
+    }
+    std::string getLastName() {
+      return this->lastName;
+    }
+    std::string getNickName() {
+      return this->nickName;
+    }
+    std::string getdarkSecret() {
+      return this->darkSecret;
     }
     std::string getPhone() {
       return this->phone;
