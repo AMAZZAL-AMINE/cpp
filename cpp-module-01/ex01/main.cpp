@@ -14,14 +14,11 @@
 
 int main() {
   int n = 5;
-  std::string name = "zeee";
+  std::string name = "hello";
   Zombie *newZombies =  zombieHorde(n, name);
- int count = 0;
-  while (count < n) {
-    newZombies[count] = Zombie(name);
+    int count = -1;
+  while (++count < n)
     newZombies[count].announce();
-    count++;
-  }
-  // delete [] newZombies;
+  delete [] newZombies;
   return 0;
 }
