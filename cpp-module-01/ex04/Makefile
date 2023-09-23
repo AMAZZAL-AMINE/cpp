@@ -12,7 +12,7 @@
 
 NAME=program
 
-SRC= main.cpp
+SRC= main.cpp File.cpp
 
 OBJ=$(SRC:.cpp=.o)
 

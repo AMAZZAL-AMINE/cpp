@@ -14,5 +14,7 @@
 #define MAIN_H
 
 #include <iostream>
+#include <fstream>
+#include "File.hpp"
 
 #endif

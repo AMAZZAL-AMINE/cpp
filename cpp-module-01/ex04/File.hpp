@@ -10,3 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FILE_HPP
+#define FILE_HPP
+
+#include "main.h"
+
+class File {
+  private :
+    std::string fileName;
+    std::string oldString;
+    std::string newString;
+  public :
+    File();
+    void setData(std::string fileName, std::string oldString, std::string newString);
+    std::string ftReplcae(std::string str);
+    void readFile();
+    ~File();
+};
+
+#endif
