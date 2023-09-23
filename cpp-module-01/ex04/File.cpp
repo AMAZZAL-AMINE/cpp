@@ -10,7 +10,7 @@ void File::setData(std::string fileName, std::string oldString, std::string newS
 
 
 std::string File::ftReplcae(std::string line) {
-  
+  return line;
 }
 
 void File::readFile() {
@@ -27,6 +27,7 @@ void File::readFile() {
   theFile.open(this->fileName);
   while (i < count) {
     std::getline(theFile, arrayHolder[i]);
+    arrayHolder[i] = this->ftReplcae(arrayHolder[i]);
     i++;
   }
   theFile.close();
