@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 17:35:59 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/24 19:35:36 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/24 19:46:01 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ void Harl::complain(std::string level) {
   }
   if (stop != -1)
     (this->*func[stop])();
+  else {
+    std::cout << "Harl not found" << std::endl;
+    exit(0);
+  }
 }
 
 Harl::~Harl() {}
