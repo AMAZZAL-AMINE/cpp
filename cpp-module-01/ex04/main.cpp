@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:07:24 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/23 13:55:53 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/24 13:43:58 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int main(int argc, char **argv) {
   std::string newString  = argv[3];
   fileObj->setData(fileName, oldString, newString);
   fileObj->readFile();
+  delete fileObj;
   return 0;
 }
