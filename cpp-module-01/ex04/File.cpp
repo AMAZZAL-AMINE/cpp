@@ -56,6 +56,7 @@ std::string  File::ftReplcae(std::string line) {
     buffer.append(newDst[count]);
     count++;
   }
+  delete [] newDst;
   return buffer;
 }
 
