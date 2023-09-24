@@ -60,11 +60,24 @@ std::string  File::ftReplcae(std::string line) {
   return buffer;
 }
 
+void File::errorHnadling() {
+  if (this->oldString.empty() || this->newString.empty()) {
+    std::cout << "Bruuuh, Argments must not be empty" << std::endl;
+    delete this;
+    exit(0);
+  }
+}
+
 void File::readFile() {
   std::ifstream theFile;
   std::ofstream dupFile;
   std::string fileConten;
   theFile.open(this->fileName);
+  if (!theFile) {
+    std::cout << "Bruuuh, File does not exists" << std::endl;
+    delete this;
+    exit(1);
+  }
   int count = 0;
   while (std::getline(theFile, fileConten)) {
     count++;
