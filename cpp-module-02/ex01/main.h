@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:13:00 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/25 16:13:01 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:51:50 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 
 #include <iostream>
+#include <cmath>
 #include "Fixed.hpp"
 
 #endif
