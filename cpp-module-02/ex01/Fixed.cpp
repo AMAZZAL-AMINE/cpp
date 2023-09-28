@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:12:05 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/27 17:43:04 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/28 16:15:47 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,19 @@ Fixed::Fixed(const Fixed &fixed) {
 Fixed::Fixed(Fixed const *fixed) {
   std::cout << "Copy constructor called" << std::endl;
   *this = *fixed;
+}
+
+int Fixed::getRawBits(void) const {
+  return this->fixedPointValue;
+}
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
+  os << fixed.toFloat();
+  return os;
+}
+
+Fixed & Fixed::operator=(const Fixed &fixed) {
+ std::cout << "Copy assignment operator called" << std::endl;
+  this->fixedPointValue = fixed.getRawBits();
+  return *this;
 }
