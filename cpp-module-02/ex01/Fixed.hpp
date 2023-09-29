@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:11:18 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/29 13:27:57 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/29 17:52:00 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class Fixed{
     Fixed(const float nbr);
     ~Fixed();
     friend std::ostream & operator<<(std::ostream& os, const Fixed& fixed);
-    Fixed & operator=(const Fixed &fixed);
     float toFloat(void) const;
     int toInt(void) const;
     int getRawBits(void) const;
