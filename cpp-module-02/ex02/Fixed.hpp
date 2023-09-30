@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:11:18 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/29 19:47:13 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/09/30 12:09:23 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class Fixed{
     Fixed(const int nbr);
     Fixed(const float nbr);
     ~Fixed();
+    float toFloat(void) const;
+    int toInt(void) const;
+    int getRawBits(void) const;
     friend std::ostream & operator<<(std::ostream& os, const Fixed& fixed);
     //pre-decrement & pre-decrement	| ++test && --test, 
     Fixed & operator++(void);
@@ -32,9 +35,24 @@ class Fixed{
     //post-increment & post-decrement	 test++ && test--,
     Fixed operator++(int);
     Fixed operator--(int);
-    float toFloat(void) const;
-    int toInt(void) const;
-    int getRawBits(void) const;
+    /* 4 arithmetic operators */
+    Fixed  operator+(const Fixed &fixed);
+    Fixed  operator-(const Fixed &fixed);
+    Fixed  operator*(const Fixed &fixed);
+    Fixed  operator/(const Fixed &fixed);
+    /* 6 comparison operators */
+    bool operator>(const Fixed &fixed) const;
+    bool operator<(const Fixed &fixed) const;
+    bool operator<=(const Fixed &fixed) const;
+    bool operator>=(const Fixed &fixed) const;
+    bool operator==(const Fixed &fixed) const;
+    bool operator!=(const Fixed &fixed) const;
+
+    static Fixed &min(Fixed &a, Fixed &b);
+    static Fixed &max(Fixed &a, Fixed &b);
+    static const Fixed &min(const Fixed &a, const Fixed &b);
+    static const Fixed &max(const Fixed &a, const Fixed &b);
+    
 };
 
 #endif

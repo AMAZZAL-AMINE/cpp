@@ -6,11 +6,11 @@
 #    By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 18:30:09 by mamazzal          #+#    #+#              #
-#    Updated: 2023/09/25 13:59:58 by mamazzal         ###   ########.fr        #
+#    Updated: 2023/09/29 22:36:37 by mamazzal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=harlFilter
+NAME=fixed
 
 SRC= main.cpp Fixed.cpp
 OBJ=$(SRC:.cpp=.o)
