@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 14:01:53 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/30 17:48:51 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/01 13:30:31 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ ClapTrap::ClapTrap() {
   std::cout << "Default constructors called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) {
+ClapTrap::ClapTrap(std::string name) : ScavTrap("bee") {
   this->name  = name;
-  this->hitPoints = 10;
-  this->energyPoints = 10;
-  this->attackDamage = 0;
-  std::cout << "Constructor called" << std::endl;
+  // this->hitPoints = 10;
+  // this->energyPoints = 10;
+  // this->attackDamage = 0;
+  std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target) {
@@ -49,6 +49,12 @@ void ClapTrap::beRepaired(unsigned int amount) {
   }
 }
 
+void ClapTrap::getData() {
+  std::cout << "HIT point     => " << this->hitPoints << std::endl;
+  std::cout << "Energy point  => " << this->energyPoints << std::endl;
+  std::cout << "Attack damage => " << this->attackDamage << std::endl;
+}
+
 ClapTrap::~ClapTrap() {
-  std::cout << "destructor called" << std::endl;
+  std::cout << this->name <<  " destructor called" << std::endl;
 }
