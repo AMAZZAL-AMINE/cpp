@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 14:01:53 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/01 19:31:42 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/01 20:20:20 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void ClapTrap::attack(const std::string& target) {
   if (this->energyPoints >= 1 && this->hitPoints >= 1) {
     this->energyPoints -= 1;
     std::cout << "ClapTrap " << this->name << " attacks ";
-    std::cout << target << " causing " << this->attackDamage << std::endl;
+    std::cout << target << " causing " << this->attackDamage << " points of damage!" << std::endl;
   }else {
     std::cout << "ClapTrap can`t do anything, no hit points or energy points left" << std::endl;
   }
@@ -67,4 +67,12 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &op) {
 
 ClapTrap::~ClapTrap() {
   std::cout << "ClapTrap : destructor called" << std::endl;
+}
+
+
+void ClapTrap::printData() {
+  std::cout << "Name => " << this->name << std::endl;
+  std::cout << "HitPpint => " << this->hitPoints << std::endl;
+  std::cout << "EnPoint => " << this->energyPoints << std::endl;
+  std::cout << "AttakPoint => " << this->attackDamage << std::endl;
 }
