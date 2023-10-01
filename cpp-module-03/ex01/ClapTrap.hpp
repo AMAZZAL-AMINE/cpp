@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 14:02:25 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/01 13:26:07 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/01 19:16:36 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,18 @@
 
 #include "main.h"
 
-class ClapTrap : public ScavTrap {
-  public :
+class ClapTrap {
+  protected:
+    std::string name;
+    int hitPoints;
+    int energyPoints;
+    int attackDamage;
+  public:
     ClapTrap();
     ClapTrap(std::string name);
-    void getData();
-    void attack(std::string const & target);
+    ClapTrap( ClapTrap const & src );
+    ClapTrap & operator=( ClapTrap const & rhs );
+    void attack(const std::string & target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
     ~ClapTrap();
