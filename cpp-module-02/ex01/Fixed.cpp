@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:12:05 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/29 17:57:52 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/02 11:44:45 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed(const Fixed &fixed) {
 }
 
 Fixed::Fixed(const int nbr) {
-  this->fixedPointValue = std::roundf(nbr * (1 << this->fractionalBits));
+  this->fixedPointValue = nbr * (1 << this->fractionalBits);
   std::cout << "Int constructor called" << std::endl;
 }
 
