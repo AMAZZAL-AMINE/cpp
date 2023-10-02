@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:10:06 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/02 12:38:37 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/02 12:39:51 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 {
   ClapTrap clapt("1337");
   ScavTrap scavt("42");
-  FragTrap fragt("mamazzal");
+  FragTrap fragt("gg");
   std::cout << "_______________________________" << std::endl;
   clapt.attack("42");
   scavt.takeDamage(12);
