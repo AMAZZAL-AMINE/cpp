@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:40:09 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/03 16:48:47 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/03 18:01:33 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ Cat::~Cat()
 	delete this->brain;
 	std::cout << "Cat :  destructor called " << std::endl;
 }
-
 
 Cat &	Cat::operator=(Cat const & rhs)
 {
