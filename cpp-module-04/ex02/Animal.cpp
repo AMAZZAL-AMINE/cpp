@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:29:57 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/04 13:50:30 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/04 13:47:52 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ Animal::Animal( const Animal & src )
 	*this = src;
 }
 
-void Animal::makeSound() {
+void Animal::makeSound()  {
 	std::cout << this->type << " maked a soung" << std::endl;
-};
+}
 
 std::string Animal::getType() const {
 	return this->type;
