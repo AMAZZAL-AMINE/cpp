@@ -12,6 +12,9 @@ class Cat : public Animal
 		Cat( Cat const & src );
 		~Cat();
 		Cat &	operator=(Cat const & rhs);
+		void makeSound () OVERRIDE {
+			this->makeSound();
+		}
 };
 
 #endif
