@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:32:31 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/06 18:39:18 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/07 12:45:57 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ Dog::~Dog()
 	std::cout << "Dog :  destructor called" << std::endl;
 }
 
+void Dog::makeSound() {
+	AAnimal::makeSound();
+}
 
 Dog &	Dog::operator=( Dog const & rhs )
 {

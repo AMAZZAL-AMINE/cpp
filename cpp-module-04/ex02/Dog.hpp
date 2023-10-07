@@ -3,7 +3,7 @@
 
 #include "main.h"
 
-class Dog : public Animal {
+class Dog : public AAnimal {
 	private:
 		Brain* brain;
 	public:
@@ -11,9 +11,7 @@ class Dog : public Animal {
 		Dog( Dog const & src );
 		~Dog();
 		Dog &	operator=( Dog const & rhs );
-		void makeSound () OVERRIDE {
-			this->makeSound();
-		}
+		void makeSound();
 };
 
 #endif 

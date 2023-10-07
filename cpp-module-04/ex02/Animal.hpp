@@ -3,14 +3,14 @@
 
 #include "main.h"
 
-class Animal {
+class AAnimal {
 	protected:
 		std::string type;
 	public:
-		Animal();
-		Animal( Animal const & src );
-		virtual ~Animal();
-		Animal &	operator=( Animal const & rhs );
+		AAnimal();
+		AAnimal( AAnimal const & src );
+		virtual ~AAnimal();
+		AAnimal &	operator=( AAnimal const & rhs );
 		std::string getType() const;
 		virtual void makeSound()  = 0;
 };

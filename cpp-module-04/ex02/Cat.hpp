@@ -3,7 +3,7 @@
 
 #include "main.h"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 	private:
 		Brain* brain;
@@ -12,9 +12,7 @@ class Cat : public Animal
 		Cat( Cat const & src );
 		~Cat();
 		Cat &	operator=(Cat const & rhs);
-		void makeSound () OVERRIDE {
-			this->makeSound();
-		}
+		void makeSound();
 };
 
 #endif
