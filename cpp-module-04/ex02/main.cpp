@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:25:05 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/07 13:09:27 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/07 16:05:41 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,5 @@ int main()
   }
   return 0;
 }
+
+// base class t9der tranih ghi mn the drived class o ssafi o mat9derch tkri mno object (instance)
