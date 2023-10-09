@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   StringToInt.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/08 19:13:01 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/09 11:00:53 by mamazzal         ###   ########.fr       */
+/*   Created: 2023/10/09 13:10:20 by mamazzal          #+#    #+#             */
+/*   Updated: 2023/10/09 13:13:36 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
 #include "main.h"
 
-class PhoneBook {
-  private :
-    Contact *contacts;
-    int index;
-    int is_full;
-  public :
-    PhoneBook();
-    void printTbaleHeader();
-    void AddContact(std::string firstName, std::string lastName, std::string nickName, std::string darkSecret, std::string phone);
-    void DisplayContacts();
-    void SearchForContact(int searchQuery);
-    void Exit(void);
-};
-
-#endif
+int StringToInt(std::string str) {
+  int count = 0;
+  int res = 0;
+  while (str[count] != '\0') {
+    if (std::isalpha(str[count])) {
+      std::cout << "Invalid input" << std::endl;
+      return -1;
+    }
+    res = res * 10 + str[count] - '0';
+    count++;
+  }
+  return res;
+}

@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 18:51:06 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/21 20:03:50 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/09 11:04:10 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@
 #include "main.h"
 
 class Contact {
-  private : 
+  private :
     std::string firstName;
     std::string lastName;
     std::string nickName;
     std::string darkSecret;
     std::string phone;
   public :
-    Contact (std::string firstName="", std::string lastName="", std::string nickName="", std::string darkSecret="", std::string phone="");
+    Contact ();
+    void setData(std::string firstName, std::string lastName, std::string nickName, std::string darkSecret, std::string phone);
     std::string getFirstName();
     std::string getLastName();
     std::string getNickName();

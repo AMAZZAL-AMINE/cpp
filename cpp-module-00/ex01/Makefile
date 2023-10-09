@@ -6,13 +6,13 @@
 #    By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 18:30:09 by mamazzal          #+#    #+#              #
-#    Updated: 2023/09/21 20:06:01 by mamazzal         ###   ########.fr        #
+#    Updated: 2023/10/09 13:13:24 by mamazzal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=contact
+NAME=phonebook
 
-SRC=main.cpp contactComponents.cpp phoneBookComponents.cpp
+SRC=main.cpp Contact.cpp phoneBook.cpp StringToInt.cpp userInput.cpp
 
 OBJ=$(SRC:.cpp=.o)
 

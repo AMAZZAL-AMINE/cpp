@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contactComponents.cpp                              :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:48:35 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/21 20:05:27 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/09 11:05:07 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-Contact::Contact(std::string firstName, std::string lastName, std::string nickName, std::string darkSecret, std::string phone) {
+Contact::Contact() {
+
+}
+
+void Contact::setData(std::string firstName, std::string lastName, std::string nickName, std::string darkSecret, std::string phone) {
   this->firstName = firstName;
   this->lastName = lastName;
   this->nickName = nickName;

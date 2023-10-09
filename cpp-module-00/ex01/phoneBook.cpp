@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phoneBookComponents.cpp                            :+:      :+:    :+:   */
+/*   phoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 20:05:53 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/21 20:07:19 by mamazzal         ###   ########.fr       */
+/*   Created: 2023/10/09 13:07:48 by mamazzal          #+#    #+#             */
+/*   Updated: 2023/10/09 13:07:51 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void PhoneBook::printTbaleHeader() {
   // std::cout << "|" << std::setw(10) << "PHONE" << std::setw(5) << "|" << std::endl;
   std::cout << "******************************************************************************************************" << std::endl;
 }
-void PhoneBook::AddContact(Contact contact) {
-  this->contacts[this->index] = contact;
+void PhoneBook::AddContact(std::string firstName, std::string lastName, std::string nickName, std::string darkSecret, std::string phone) {
+  this->contacts[this->index].setData(firstName, lastName, nickName, darkSecret,phone);
   this->index++;
   if (this->index == 8) {
     this->is_full = 1;
@@ -56,12 +56,11 @@ void PhoneBook::SearchForContact(int searchQuery) {
     }
     while (searchCount < this->index || (is_full != 0 && searchCount < 8)) {
       if (searchCount == searchQuery) {
-        this->printTbaleHeader();
-        std::cout << "|" << std::setw(3)  << searchCount << std::setw(3);
-        std::cout << "|" << std::setw(15) << this->contacts[searchCount].getFirstName() << std::setw(5);
-        std::cout << "|" << std::setw(15) << this->contacts[searchCount].getLastName() << std::setw(5);
-        std::cout << "|" << std::setw(15) << this->contacts[searchCount].getNickName() << std::setw(5);
-        std::cout << "|" << std::setw(15) << this->contacts[searchCount].getdarkSecret() << std::setw(5)<< std::endl;
+        std::cout << "ID" << searchCount << std::setw(3);
+        std::cout << "FIRST NAME\t: " << this->contacts[searchCount].getFirstName() << std::endl;
+        std::cout << "LAST NAME\t: " << this->contacts[searchCount].getLastName() << std::endl;
+        std::cout << "NICKNAME\t: " << this->contacts[searchCount].getNickName() << std::endl;
+        std::cout << "DARCKSECRET\t: " << this->contacts[searchCount].getdarkSecret() << std::endl;
         // std::cout << "|" << std::setw(10) << this->contacts[searchCount].getPhone() << std::setw(5) << "|" << std::endl;
         break;
       }
