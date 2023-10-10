@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 19:13:01 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/09 11:00:53 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:20:23 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class PhoneBook {
     void DisplayContacts();
     void SearchForContact(int searchQuery);
     void Exit(void);
+    std::string turncateString(std::string str);
 };
 
 #endif

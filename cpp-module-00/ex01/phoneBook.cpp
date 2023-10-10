@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:07:48 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/09 13:07:51 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:26:52 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,25 @@ PhoneBook::PhoneBook() {
   this->is_full = 0;
 }
 
+
+std::string PhoneBook::turncateString(std::string str) {
+  if (str.length() > 10) {
+    str = str.substr(0, 9);
+    str.append(".");
+  }
+  return str;
+}
+
 void PhoneBook::printTbaleHeader() {
-  std::cout << "******************************************************************************************************" << std::endl;
-  std::cout << "|" << std::setw(3) << "ID" << std::setw(3);
-  std::cout << "|" << std::setw(15) << "FIRST NAME" << std::setw(5);
-  std::cout << "|" << std::setw(15) << "LAST NAME" << std::setw(5);
-  std::cout << "|" << std::setw(15) << "NICK NAME" << std::setw(5);
-  std::cout << "|" << std::setw(15) << "DARK SECRET" << std::setw(5)<< std::endl;
-  // std::cout << "|" << std::setw(10) << "PHONE" << std::setw(5) << "|" << std::endl;
-  std::cout << "******************************************************************************************************" << std::endl;
+    const int columnWidth = 10;
+
+    std::cout << "********************************************************" << std::endl;
+    std::cout << "|" << std::setw(columnWidth) << std::right << "ID"
+              << "|" << std::setw(columnWidth) << std::right << "FIRST NAME"
+              << "|" << std::setw(columnWidth) << std::right << "LAST NAME"
+              << "|" << std::setw(columnWidth) << std::right << "NICK NAME"
+              << "|" << std::setw(columnWidth) << std::right << "DARKSECRET" << "|" << std::endl;
+    std::cout << "********************************************************" << std::endl;
 }
 void PhoneBook::AddContact(std::string firstName, std::string lastName, std::string nickName, std::string darkSecret, std::string phone) {
   this->contacts[this->index].setData(firstName, lastName, nickName, darkSecret,phone);
@@ -36,16 +46,16 @@ void PhoneBook::AddContact(std::string firstName, std::string lastName, std::str
     this->index = 0;
   }
 }
+
 void PhoneBook::DisplayContacts() {
   int count = 0;
   this->printTbaleHeader();
   while (count < this->index || (is_full != 0 && count < 8)) {
-    std::cout << "|" << std::setw(3)  << count << std::setw(3);
-    std::cout << "|" << std::setw(15) << this->contacts[count].getFirstName();
-    std::cout << "|" << std::setw(15) << this->contacts[count].getLastName();
-    std::cout << "|" << std::setw(15) << this->contacts[count].getNickName();
-    std::cout << "|" << std::setw(15) << this->contacts[count].getdarkSecret()<< std::endl;
-    // std::cout << "|" << std::setw(10) << this->contacts[count].getPhone() << std::setw(5) << "|" << std::endl;
+    std::cout << "|" << std::setw(10) << count << "|";
+    std::cout << std::setw(10) << this->turncateString(this->contacts[count].getFirstName()) << "|";
+    std::cout << std::setw(10) << this->turncateString(this->contacts[count].getLastName())  << "|";
+    std::cout << std::setw(10) << this->turncateString(this->contacts[count].getNickName()) << "|";
+    std::cout << std::setw(10) << this->turncateString(this->contacts[count].getdarkSecret()) << "|" << std::endl;
     count++;
   }
 }
