@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 18:29:43 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/09 13:16:58 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:47:11 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int main() {
         nname = ReadInputNickName(nname);
       secret = ReadInputSecret(secret);
       while (FieldIsEmpty(secret))
-        secret = ReadInputSecret(secret);
+        std::getline(std::cin, secret);
+      phone = ReadInputPhone(phone);
       while (FieldIsEmpty(phone))
         phone = ReadInputPhone(phone);
       phoneBook.AddContact(fname,lname, nname, secret, phone); 

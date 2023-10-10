@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:07:48 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/10 16:26:52 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:28:18 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void PhoneBook::SearchForContact(int searchQuery) {
         std::cout << "LAST NAME\t: " << this->contacts[searchCount].getLastName() << std::endl;
         std::cout << "NICKNAME\t: " << this->contacts[searchCount].getNickName() << std::endl;
         std::cout << "DARCKSECRET\t: " << this->contacts[searchCount].getdarkSecret() << std::endl;
-        // std::cout << "|" << std::setw(10) << this->contacts[searchCount].getPhone() << std::setw(5) << "|" << std::endl;
+        std::cout << "PHONE\t\t: " << this->contacts[searchCount].getPhone() << std::endl;
         break;
       }
       searchCount++;
