@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:13:50 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/21 19:45:03 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/11 13:31:00 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Zombie* newZombie( std::string name)  {
 }
 
 void randomChump( std::string name ) {
-  Zombie *zombie = newZombie(name);
-  zombie->announce();
-  delete zombie;
+  Zombie zombie(name);
+  zombie.announce();
 }
