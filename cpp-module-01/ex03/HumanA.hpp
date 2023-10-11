@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 10:22:25 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/23 12:27:28 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/11 15:38:43 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ class HumanA {
   public :
     HumanA(std::string name, Weapon  &_weapon);
     void attack();
-    ~HumanA();
 };
 #endif
