@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:12:05 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/19 18:12:32 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:41:39 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int Fixed::getRawBits(void) const {
 }
 
 std::ostream & operator<<(std::ostream& cout, const Fixed& fixed) {
-  cout << static_cast<float>(fixed.fixedPointValue) / (1 << fixed.fractionalBits);
+  cout << fixed.toFloat();
   return cout;
 }
 
