@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:12:05 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/19 18:32:17 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:37:49 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Fixed & Fixed::operator=(const Fixed &fixed) {
 }
 
 std::ostream & operator<<(std::ostream& os, const Fixed& fixed) {
-  os << static_cast<float>(fixed.fixedPointValue) / (1 << fixed.fractionalBits);
+  os << fixed.toFloat();
   return os;
 }
 

@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:11:18 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/19 18:27:10 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:38:36 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Fixed{
     float toFloat(void) const;
     int toInt(void) const;
     int getRawBits(void) const;
-    friend std::ostream & operator<<(std::ostream& os, const Fixed& fixed);
     /*pre-decrement & pre-decrement	| ++test && --test  */
     Fixed & operator++(void);
     Fixed & operator--(void);
@@ -54,5 +53,7 @@ class Fixed{
     static const Fixed &min(const Fixed &a, const Fixed &b);
     static const Fixed &max(const Fixed &a, const Fixed &b);
 };
+  
+  std::ostream & operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif
