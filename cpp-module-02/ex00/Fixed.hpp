@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 20:44:06 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/09/25 14:47:09 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:08:02 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Fixed  {
     ~Fixed();
     int getRawBits(void) const;
     void setRawBits(int const raw);
+    Fixed & operator=(Fixed const &fixed);
 };
 
 #endif

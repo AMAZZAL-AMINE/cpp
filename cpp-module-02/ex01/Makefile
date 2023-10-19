@@ -6,7 +6,7 @@
 #    By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 18:30:09 by mamazzal          #+#    #+#              #
-#    Updated: 2023/09/25 13:59:58 by mamazzal         ###   ########.fr        #
+#    Updated: 2023/10/19 18:08:59 by mamazzal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,9 @@ SRC= main.cpp Fixed.cpp
 OBJ=$(SRC:.cpp=.o)
 
 FLAGS=-Wall -Wextra -Werror -std=c++98
+
+%.o: %.cpp
+	c++ $(FLAGS) -c $< -o $@
 
 all: $(NAME)
 
