@@ -1,29 +1,18 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 21:09:03 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/12 21:09:04 by mamazzal         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
 #include "main.h"
-
-class ScavTrap : public ClapTrap {
+class ScavTrap : public ClapTrap
+{
+	private:
 	public:
 		ScavTrap();
-		ScavTrap( ScavTrap const & src );
-		ScavTrap(std::string name);
-		void guardGate();
+		ScavTrap( ScavTrap  & src );
 		~ScavTrap();
-		ScavTrap & operator=( ScavTrap const & rhs );
-
+		ScavTrap & operator=(const ScavTrap & src );
+		ScavTrap(std::string name);
+		void attack(const std::string & target);
+		void guardGate();
 };
 
-#endif
+#endif 
