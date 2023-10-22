@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 11:25:05 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/22 12:42:17 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/22 12:47:06 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,9 @@ ScavTrap::ScavTrap(ScavTrap & src ) {
 	*this = src;
 }
 
-
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap Destructor called" << std::endl;
 }
-
 
 ScavTrap & ScavTrap::operator=(const ScavTrap & src ) {
 	std::cout << "ScavTrap Assignation operator called" << std::endl;
