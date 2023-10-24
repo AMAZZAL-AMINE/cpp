@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 21:09:41 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/12 21:09:42 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:55:02 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Dog : public Animal {
 		Dog( Dog const & src );
 		~Dog();
 		Dog &	operator=( Dog const & rhs );
+		void makeSound() const;
 };
 
 #endif 

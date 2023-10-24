@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:32:31 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/02 15:53:14 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:55:30 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,14 @@ Dog::~Dog()
 Dog &				Dog::operator=( Dog const & rhs )
 {
 	std::cout << "Dog asignment operator called" << std::endl;
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		this->type = rhs.type;
+	}
 	return *this;
+}
+
+void				Dog::makeSound() const
+{
+	std::cout << this->type << " maked a soung" << std::endl;
 }

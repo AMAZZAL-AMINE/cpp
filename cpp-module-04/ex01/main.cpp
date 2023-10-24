@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:25:05 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/06 16:41:15 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 19:56:06 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 int main()
 {
-  int size = 3;
-  Animal *animals[size];
-  int count = 0;
-  while (count < size / 2) {
-    animals[count] = new Dog;
-    count++;
+  Animal *animals[5];
+  int i = 0;
+  for (; i < 5; i++)
+  {
+    if (i < 2)
+      animals[i] = new Dog();
+    else
+      animals[i] = new Cat();
   }
-  count = size / 2;
-  while (count < size) {
-    animals[count] = new Cat;
-    count++;
-  }
-  count = 0;
-  while (count < size) {
-    delete animals[count];
-    count++;
+  std::cout <<std::endl;
+  std::cout << "--------- TIME TO KILL THE ANIMALS ---------" << std::endl;
+  std::cout << std::endl;
+  i = 0;
+  for (; i < 5; i++)
+  {
+    delete animals[i];
   }
   return 0;
 }

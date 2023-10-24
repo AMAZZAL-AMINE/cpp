@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 21:09:48 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/12 21:09:49 by mamazzal         ###   ########.fr       */
+/*   Created: 2023/10/12 21:09:32 by mamazzal          #+#    #+#             */
+/*   Updated: 2023/10/24 17:32:50 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class Animal {
 	public:
 		Animal();
 		Animal( Animal const & src );
-		virtual ~Animal();
-		Animal &	operator=( Animal const & rhs );
+		virtual void makeSound() const;
 		std::string getType() const;
-		void makeSound() const;
+		virtual ~Animal();
+		Animal & operator=( Animal const & rhs );
 };
 
 #endif

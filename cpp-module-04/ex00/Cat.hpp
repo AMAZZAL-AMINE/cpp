@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 21:09:37 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/12 21:09:38 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:54:32 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Cat : public Animal
 		Cat();
 		Cat( Cat const & src );
 		~Cat();
+		void	makeSound() const;
 		Cat &	operator=(Cat const & rhs);
 };
 

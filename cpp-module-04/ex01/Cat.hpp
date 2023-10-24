@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 21:09:57 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/12 21:09:58 by mamazzal         ###   ########.fr       */
+/*   Created: 2023/10/12 21:09:37 by mamazzal          #+#    #+#             */
+/*   Updated: 2023/10/24 18:40:50 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Cat : public Animal
 		Cat();
 		Cat( Cat const & src );
 		~Cat();
+		void	makeSound() const;
 		Cat &	operator=(Cat const & rhs);
 };
 
