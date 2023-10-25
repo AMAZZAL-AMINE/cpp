@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 21:10:20 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/12 21:10:21 by mamazzal         ###   ########.fr       */
+/*   Created: 2023/10/12 21:09:37 by mamazzal          #+#    #+#             */
+/*   Updated: 2023/10/24 18:40:50 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "main.h"
 
-class Cat : public AAnimal
+class Cat : public Animal
 {
 	private:
 		Brain* brain;
@@ -23,8 +23,8 @@ class Cat : public AAnimal
 		Cat();
 		Cat( Cat const & src );
 		~Cat();
+		void	makeSound() const;
 		Cat &	operator=(Cat const & rhs);
-		void makeSound();
 };
 
 #endif

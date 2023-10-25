@@ -6,40 +6,40 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:29:57 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/07 12:39:44 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:56:30 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-AAnimal::AAnimal()
+Animal::Animal()
 {
-	std::cout << "Animal : default constructor called" << std::endl;
+	std::cout << "Animal default constructor called" << std::endl;
 	this->type = "ANIMAL";
 }
 
-AAnimal::AAnimal( const AAnimal & src )
+Animal::Animal( const Animal & src )
 {
-	std::cout << "Animal :  copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor called" << std::endl;
 	*this = src;
 }
 
-void AAnimal::makeSound()  {
-	std::cout << this->type << " maked a soung" << std::endl;
-}
+// void Animal::makeSound() const {
+// 	std::cout << this->type << " maked a soung" << std::endl;
+// }
 
-std::string AAnimal::getType() const {
+std::string Animal::getType() const {
 	return this->type;
 }
 
-AAnimal::~AAnimal()
+Animal::~Animal()
 {
-	std::cout << "Animal :  destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 }
 
-AAnimal & AAnimal::operator=( AAnimal const & rhs )
+Animal & Animal::operator=( Animal const & rhs )
 {
-	std::cout << "Animal :  asignment operator called" << std::endl;
+	std::cout << "Animal asignment operator called" << std::endl;
 	if ( this != &rhs )
 	{
 		this->type = rhs.type;

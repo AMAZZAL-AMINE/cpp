@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:32:31 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/24 15:55:30 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/25 18:47:32 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Dog::Dog()
 {
 	std::cout << "Dog default Constructor called" << std::endl;
-	this->type = "DOG";
+	this->type = "Dog";
 }
 
 Dog::Dog( const Dog & src )

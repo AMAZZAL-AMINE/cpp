@@ -15,7 +15,7 @@
 Cat::Cat()
 {
 	std::cout << "Cat default  constructor called" << std::endl;
-	this->type = "CAT";
+	this->type = "Cat";
 }
 
 Cat::Cat( const Cat & src )

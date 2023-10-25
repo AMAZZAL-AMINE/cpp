@@ -19,6 +19,7 @@ Brain::~Brain()
 
 Brain &	Brain::operator=( Brain const & rhs )
 {
+	std::cout << "Brain copy operator  called" << std::endl;
 	if ( this != &rhs )
 	{
 		int count = 0;
@@ -29,10 +30,3 @@ Brain &	Brain::operator=( Brain const & rhs )
 	}
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, Brain const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-

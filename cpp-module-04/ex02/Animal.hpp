@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 21:10:10 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/12 21:10:11 by mamazzal         ###   ########.fr       */
+/*   Created: 2023/10/12 21:09:32 by mamazzal          #+#    #+#             */
+/*   Updated: 2023/10/24 17:32:50 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 #include "main.h"
 
-class AAnimal {
+class Animal {
 	protected:
 		std::string type;
 	public:
-		AAnimal();
-		AAnimal( AAnimal const & src );
-		virtual ~AAnimal();
-		AAnimal &	operator=( AAnimal const & rhs );
+		Animal();
+		Animal( Animal const & src );
+		virtual void makeSound() const = 0;
 		std::string getType() const;
-		virtual void makeSound()  = 0;
+		virtual ~Animal();
+		Animal & operator=( Animal const & rhs );
 };
 
 #endif

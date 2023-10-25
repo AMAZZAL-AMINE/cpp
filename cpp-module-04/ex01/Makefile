@@ -15,7 +15,10 @@ NAME=frag
 SRC= main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp
 OBJ=$(SRC:.cpp=.o)
 
-FLAGS=-Wall -Wextra -Werror -std=c++98
+CFLAGS=-Wall -Wextra -Werror -std=c++98
+
+%.o: %.cpp
+	c++ $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 

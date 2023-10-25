@@ -14,26 +14,13 @@
 
 int main()
 {
-  int size = 10;
-  AAnimal *animals[size];
-  int count = 0;
-  while (count < size / 2) {
-    animals[count] = new Dog;
-    animals[count]->makeSound();
-    count++;
-  }
-  count = size / 2;
-  while (count < size) {
-    animals[count] = new Cat;
-    animals[count]->makeSound();
-    count++;
-  }
-  count = 0;
-  while (count < size) {
-    delete animals[count];
-    count++;
-  }
+  Dog *klb = new Dog();
+  Cat *msh = new Cat();
+  std::cout << "___________________ TIME TO DANCE ___________________" << std::endl;
+  klb->makeSound();
+  msh->makeSound();
+  std::cout << "___________________ TIME TO DIE ___________________" << std::endl;
+  delete klb;
+  delete msh;
   return 0;
 }
-
-// base class t9der tranih ghi mn the drived class o ssafi o mat9derch tkri mno object (instance)
