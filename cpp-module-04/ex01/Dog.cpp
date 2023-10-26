@@ -6,7 +6,7 @@
 /*   By: mamazzal <mamazzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:32:31 by mamazzal          #+#    #+#             */
-/*   Updated: 2023/10/25 23:52:16 by mamazzal         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:51:17 by mamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,25 @@ Dog::Dog()
 	this->brain = new Brain();
 }
 
-Dog::Dog( const Dog & src )
+Dog::Dog( const Dog & src)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
-	*this = src;
+	this->brain = new Brain(*src.brain);
+	this->type = src.type;
 }
-
 
 Dog::~Dog()
 {
-	std::cout << "Dog destructor called" << std::endl;
 	delete this->brain;
+	std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog &		Dog::operator=( Dog const &  rhs )
 {
 	std::cout << "Dog assignment operator called" << std::endl;
 	if (this != &rhs) {
-		this->type = rhs.type;
 		delete this->brain;
+		this->type = rhs.type;
 		this->brain = new Brain(*rhs.brain);
 	}
   return *this;
@@ -45,5 +45,5 @@ Dog &		Dog::operator=( Dog const &  rhs )
 
 void		Dog::makeSound() const
 {
-	std::cout << this->type << " maked a soung" << std::endl;
+	std::cout << this->type << " maked a sound" << std::endl;
 }
